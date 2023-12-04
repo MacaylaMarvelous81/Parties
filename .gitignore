@@ -1,0 +1,13 @@
+# Project place file
+/Parties.rbxl
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+# roblox-ts generated files
+include/
+out/
+
+# Dependencies
+node_modules/
