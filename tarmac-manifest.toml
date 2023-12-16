@@ -13,9 +13,19 @@ hash = "58bcb33393ae2b33739b8a2d3a44cfc9237f1a18eca2a3cb7296009f9f862dc2"
 id = 15647928801
 packable = false
 
+[inputs."assets/ui/icons/backpack-2.png"]
+hash = "d897eae7f347c416229fe19d7742f4774668f5257321b8bc12c694bde3bc7cba"
+id = 15653967858
+packable = false
+
 [inputs."assets/ui/icons/box-arrow-in-right.png"]
 hash = "265f1a1c54cb6716010995d1193f5f74ab0ab4bd6d07124ea9ad52f694273f65"
 id = 15646691259
+packable = false
+
+[inputs."assets/ui/icons/cart-4.png"]
+hash = "9873df06af4555b0d1aeae67c6fe135c7b9a3403ab76bc1bc9093a183c47fc5c"
+id = 15653968006
 packable = false
 
 [inputs."assets/ui/icons/plus-lg.png"]

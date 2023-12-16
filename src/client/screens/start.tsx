@@ -41,6 +41,31 @@ export default function StartScreen() {
 					textColor={ color.black }
 					image={ assets.ui.button.long.placeholder }
 					badge={ false } />
+				<frame AutomaticSize={ Enum.AutomaticSize.XY } BackgroundTransparency={ 1 }>
+					<uilistlayout
+						FillDirection={ Enum.FillDirection.Horizontal }
+						Padding={ new UDim(0, rem(2.1875)) } />
+					{ Roact.createElement("UIFlexItem", {
+						ItemLineAlignment: Enum.ItemLineAlignment.Stretch
+					}) }
+					<SuperButton
+						size={ SuperButtonSize.Thin }
+						icon={ assets.ui.icons["cart-4"] }
+						title="Store"
+						description=""
+						textColor={ color.black }
+						image={ assets.ui.button.thin.placeholder }
+						badge={ true }
+						badgeText="NEW!" />
+					<SuperButton
+						size={ SuperButtonSize.Thin }
+						icon={ assets.ui.icons["backpack-2"] }
+						title="Backpack"
+						description=""
+						textColor={ color.black }
+						image={ assets.ui.button.thin.placeholder }
+						badge={ false } />
+				</frame>
 			</frame>
 		</frame>
 	);

@@ -23,21 +23,27 @@ interface SuperButtonProps {
 export function SuperButton({ size, icon, title, description, textColor, image, badge, badgeText, native }: SuperButtonProps) {
 	const rem = useRem();
 
-	// Determine button width from size
+	// Determine button dimensions
 	let width: number;
+	let height: number;
+	let textHeight: number;
 	switch (size) {
 		case SuperButtonSize.Long:
 			width = rem(68.5625);
+			height = rem(11.625);
+			textHeight = rem(6.375);
 			break;
 		case SuperButtonSize.Thin:
 			width = rem(33.1875);
+			height = rem(14.9375);
+			textHeight = rem(9.6875);
 			break;
 	}
 
 	const badgeElement = badge ? <Badge text={ badgeText || "" } /> : undefined;
 
 	return (
-		<imagebutton Image={ image } { ...native } Size={ UDim2.fromOffset(width, rem(11.625)) }>
+		<imagebutton Image={ image } { ...native } Size={ UDim2.fromOffset(width, height) }>
 			<uilistlayout
 				FillDirection={ Enum.FillDirection.Vertical }
 				Padding={ new UDim(0, rem(1.0625)) } />
@@ -80,7 +86,7 @@ export function SuperButton({ size, icon, title, description, textColor, image, 
 					FillDirection={ Enum.FillDirection.Horizontal }
 					Wraps={ true } />
 				<textlabel
-					Size={ UDim2.fromOffset(0, rem(6.375)) }
+					Size={ UDim2.fromOffset(0, textHeight) }
 					AutomaticSize={ Enum.AutomaticSize.X }
 					BackgroundTransparency={ 1 }
 					TextColor3={ textColor }

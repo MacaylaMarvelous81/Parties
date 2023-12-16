@@ -11,7 +11,9 @@ return {
 			},
 		},
 		icons = {
+			["backpack-2"] = "rbxassetid://15653967858",
 			["box-arrow-in-right"] = "rbxassetid://15646691259",
+			["cart-4"] = "rbxassetid://15653968006",
 			["plus-lg"] = "rbxassetid://15646533091",
 		},
 	},
