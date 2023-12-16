@@ -1,6 +1,7 @@
 import Roact from "@rbxts/roact";
 import { font } from "client/styles";
 import useRem from "client/hooks/use-rem";
+import Badge from "client/components/badge";
 
 export enum SuperButtonSize {
 	Long,
@@ -32,6 +33,8 @@ export function SuperButton({ size, icon, title, description, textColor, image, 
 			width = rem(33.1875);
 			break;
 	}
+
+	const badgeElement = badge ? <Badge text={ badgeText || "" } /> : undefined;
 
 	return (
 		<imagebutton Image={ image } { ...native } Size={ UDim2.fromOffset(width, rem(11.625)) }>
@@ -67,7 +70,7 @@ export function SuperButton({ size, icon, title, description, textColor, image, 
 					TextSize={ rem(2) }
 					Text={ title }>
 					</textlabel>
-				{ /* badge goes here */ }
+				{ badgeElement }
 			</frame>
 			<frame AutomaticSize={ Enum.AutomaticSize.XY } BackgroundTransparency={ 1 }>
 				{ Roact.createElement("UIFlexItem", {

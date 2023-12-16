@@ -22,6 +22,7 @@ export const font = {
 
 export const color = {
 	jet: Color3.fromHex("#2f2d2e"),
+	vermillion: Color3.fromHex("#f24333"),
 	white: Color3.fromHex("#fff"),
 	black: Color3.fromHex("#121212")
 };
