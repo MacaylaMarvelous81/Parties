@@ -1,1 +1,1 @@
-export = { ui: { button: { long: { inviting: "rbxassetid://15646458962", placeholder: "rbxassetid://15646459028" } }, icons: { ["box-arrow-in-right"]: "rbxassetid://15646691259", ["plus-lg"]: "rbxassetid://15646533091" } } };
+export = { ui: { button: { long: { inviting: "rbxassetid://15646458962", placeholder: "rbxassetid://15646459028" }, thin: { placeholder: "rbxassetid://15647928801" } }, icons: { ["box-arrow-in-right"]: "rbxassetid://15646691259", ["plus-lg"]: "rbxassetid://15646533091" } } };

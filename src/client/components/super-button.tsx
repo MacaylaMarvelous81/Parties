@@ -1,8 +1,14 @@
 import Roact from "@rbxts/roact";
-import { font, color } from "client/styles";
+import { font } from "client/styles";
 import useRem from "client/hooks/use-rem";
 
-interface LongButtonProps {
+export enum SuperButtonSize {
+	Long,
+	Thin
+}
+
+interface SuperButtonProps {
+	size: SuperButtonSize;
 	icon: string;
 	title: string;
 	description: string;
@@ -13,11 +19,22 @@ interface LongButtonProps {
 	native?: Partial<InstanceProperties<ImageButton>>
 }
 
-export default function LongButton({ icon, title, description, textColor, image, badge, badgeText, native }: LongButtonProps) {
+export function SuperButton({ size, icon, title, description, textColor, image, badge, badgeText, native }: SuperButtonProps) {
 	const rem = useRem();
 
+	// Determine button width from size
+	let width: number;
+	switch (size) {
+		case SuperButtonSize.Long:
+			width = rem(68.5625);
+			break;
+		case SuperButtonSize.Thin:
+			width = rem(33.1875);
+			break;
+	}
+
 	return (
-		<imagebutton Image={ image } { ...native } Size={ UDim2.fromOffset(rem(68.5625), rem(11.625)) }>
+		<imagebutton Image={ image } { ...native } Size={ UDim2.fromOffset(width, rem(11.625)) }>
 			<uilistlayout
 				FillDirection={ Enum.FillDirection.Vertical }
 				Padding={ new UDim(0, rem(1.0625)) } />

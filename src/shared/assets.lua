@@ -6,6 +6,9 @@ return {
 				inviting = "rbxassetid://15646458962",
 				placeholder = "rbxassetid://15646459028",
 			},
+			thin = {
+				placeholder = "rbxassetid://15647928801",
+			},
 		},
 		icons = {
 			["box-arrow-in-right"] = "rbxassetid://15646691259",

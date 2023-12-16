@@ -1,11 +1,13 @@
 import Roact from "@rbxts/roact";
 import ReactRoblox from "@rbxts/react-roblox";
 import { WithControls } from "@rbxts/ui-labs";
-import LongButton from "client/components/long-button";
+import { EnumList } from "@rbxts/ui-labs/out/ControlsUtil";
+import { SuperButtonSize, SuperButton } from "client/components/super-button";
 import { color } from "client/styles";
 import assets from "shared/assets";
 
 const controls = {
+	size: EnumList(SuperButtonSize, "Long", false),
 	title: "Title",
 	description: "Description",
 	textColor: color.black,
@@ -14,10 +16,11 @@ const controls = {
 };
 
 const Story: WithControls<typeof controls> = {
-	summary: "A long button contains a title, description, and an optional badge over a background image. It should take up a whole row.",
+	summary: "A large button with an image background, an icon, a title, a description, and an optional badge.",
 	controls: controls,
 	story: (props) => {
-		return Roact.createElement(LongButton, {
+		return Roact.createElement(SuperButton, {
+			size: <SuperButtonSize>props.controls.size,
 			icon: assets.ui.icons["plus-lg"],
 			title: props.controls.title,
 			description: props.controls.description,

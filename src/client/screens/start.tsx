@@ -2,7 +2,7 @@ import Roact from "@rbxts/roact";
 import assets from "shared/assets";
 import { font, color } from "client/styles";
 import useRem from "client/hooks/use-rem";
-import LongButton from "client/components/long-button";
+import { SuperButtonSize, SuperButton } from "client/components/super-button";
 
 export default function StartScreen() {
 	const rem = useRem();
@@ -25,14 +25,16 @@ export default function StartScreen() {
 					FontFace={ font.exbold }
 					TextSize={ rem(3.5) }
 					Text="Parties" />
-				<LongButton
+				<SuperButton
+					size={ SuperButtonSize.Long }
 					icon={ assets.ui.icons["plus-lg"] }
 					title="Create a Party"
 					description="Your friends will be able to join your party. You can also share the invite code or link to invite others."
 					textColor={ color.white }
 					image={ assets.ui.button.long.inviting }
 					badge={ false } />
-				<LongButton
+				<SuperButton
+					size={ SuperButtonSize.Long }
 					icon={ assets.ui.icons["box-arrow-in-right"] }
 					title="Join a Party"
 					description="You can join a friend's party or find a party by its invite code."
