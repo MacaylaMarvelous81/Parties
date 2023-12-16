@@ -1,17 +1,19 @@
 {
 	"scripts": {
-		"up-assets": "tarmac sync --target roblox && ltts src/shared/assets.lua",
+		"assets": "tarmac sync --target roblox && ltts src/shared/assets.lua",
 		"dev": "rbxtsc -w"
 	},
 	"dependencies": {
-		"@rbxts/roact": "^1.4.4-ts.0",
-		"@rbxts/services": "^1.5.1"
+		"@rbxts/react-roblox": "^0.2.0",
+		"@rbxts/roact": "npm:@rbxts/react-ts",
+		"@rbxts/services": "^1.5.1",
+		"@rbxts/ui-labs": "^1.0.2"
 	},
 	"devDependencies": {
 		"@rbxts/compiler-types": "^2.2.0-types.0",
 		"@rbxts/types": "^1.0.736",
 		"lua-to-typescript": "^0.2.2",
 		"roblox-ts": "^2.2.0",
-		"typescript": "^5.3.2"
+		"typescript": "5.2.2"
 	}
 }

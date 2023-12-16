@@ -1,5 +1,4 @@
 name = "Parties"
-upload-to-user-id = 97543938
 
 [[inputs]]
 glob = "assets/**/*.png"

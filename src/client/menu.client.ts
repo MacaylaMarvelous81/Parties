@@ -1,5 +1,7 @@
 import Roact from "@rbxts/roact";
+import { createRoot } from "@rbxts/react-roblox";
 import { Players } from "@rbxts/services";
 import Screen from "client/screen";
 
-Roact.mount(Roact.createElement(Screen), Players.LocalPlayer!.WaitForChild("PlayerGui"), "Screen")
+const root = createRoot(Players.LocalPlayer.WaitForChild("PlayerGui"), {});
+root.render(Roact.createElement(Screen));
