@@ -38,8 +38,8 @@ export default function StartScreen() {
 					icon={ assets.ui.icons["box-arrow-in-right"] }
 					title="Join a Party"
 					description="You can join a friend's party or find a party by its invite code."
-					textColor={ color.black }
-					image={ assets.ui.button.long.placeholder }
+					textColor={ color.white }
+					image={ assets.ui.button.long.driving }
 					badge={ false } />
 				<frame AutomaticSize={ Enum.AutomaticSize.XY } BackgroundTransparency={ 1 }>
 					<uilistlayout
@@ -53,8 +53,8 @@ export default function StartScreen() {
 						icon={ assets.ui.icons["cart-4"] }
 						title="Store"
 						description=""
-						textColor={ color.black }
-						image={ assets.ui.button.thin.placeholder }
+						textColor={ color.white }
+						image={ assets.ui.button.thin.writing }
 						badge={ true }
 						badgeText="NEW!" />
 					<SuperButton
@@ -62,8 +62,8 @@ export default function StartScreen() {
 						icon={ assets.ui.icons["backpack-2"] }
 						title="Backpack"
 						description=""
-						textColor={ color.black }
-						image={ assets.ui.button.thin.placeholder }
+						textColor={ color.white }
+						image={ assets.ui.button.thin.backpack }
 						badge={ false } />
 				</frame>
 			</frame>

@@ -1,3 +1,8 @@
+[inputs."assets/ui/button/long/driving.png"]
+hash = "f8b9a0865ed3374083a720a6e2d61277cb9a6ee86b0d7e6c8da065182360ff18"
+id = 15668473918
+packable = false
+
 [inputs."assets/ui/button/long/inviting.png"]
 hash = "b76f662a7f11808fc5df52f04d0b335fbb70f40433a5acc894b4ea7bd985f405"
 id = 15646458962
@@ -8,9 +13,19 @@ hash = "8262c0a2e5aafc0edf127507c9dd6e06f097ed1b7b6b576d59344e8e4fe44fbb"
 id = 15646459028
 packable = false
 
+[inputs."assets/ui/button/thin/backpack.png"]
+hash = "1f06dbc226b4e9a594a80f004044fedc7c26b977bc3ce26cdbfb4aea7747b832"
+id = 15668474137
+packable = false
+
 [inputs."assets/ui/button/thin/placeholder.png"]
 hash = "58bcb33393ae2b33739b8a2d3a44cfc9237f1a18eca2a3cb7296009f9f862dc2"
 id = 15647928801
+packable = false
+
+[inputs."assets/ui/button/thin/writing.png"]
+hash = "5e6a73649710d68fdb396ea0e993d3853308a65675a9e3d4d70e9d22c678d25a"
+id = 15668474307
 packable = false
 
 [inputs."assets/ui/icons/backpack-2.png"]
