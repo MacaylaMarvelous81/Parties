@@ -1,7 +1,9 @@
-import Roact from "@rbxts/roact";
+import Roact, { useEffect, useState } from "@rbxts/roact";
 import { font } from "client/styles";
 import useRem from "client/hooks/use-rem";
 import Badge from "client/components/badge";
+import { useMotion } from "client/hooks/use-motion";
+import { color } from "client/styles";
 
 export enum SuperButtonSize {
 	Long,
@@ -22,6 +24,24 @@ interface SuperButtonProps {
 
 export function SuperButton({ size, icon, title, description, textColor, image, badge, badgeText, native }: SuperButtonProps) {
 	const rem = useRem();
+	const [ hovered, setHovered ] = useState(false);
+	const [ imageColor, imageColorMotion ] = useMotion(color.white);
+
+	useEffect(() => {
+		if (hovered) {
+			imageColorMotion.spring(color.hover, {
+				tension: 600,
+				friction: 34,
+				mass: 0.7
+			});
+		} else {
+			imageColorMotion.spring(color.white, {
+				tension: 600,
+				friction: 34,
+				mass: 0.7
+			});
+		}
+	}, [ hovered ]);
 
 	// Determine button dimensions
 	let width: number;
@@ -43,7 +63,10 @@ export function SuperButton({ size, icon, title, description, textColor, image, 
 	const badgeElement = badge ? <Badge text={ badgeText || "" } /> : undefined;
 
 	return (
-		<imagebutton Image={ image } { ...native } Size={ UDim2.fromOffset(width, height) }>
+		<imagebutton Size={ UDim2.fromOffset(width, height) } Image={ image } ImageColor3={ imageColor } { ...native } Event={ {
+			MouseEnter: () => setHovered(true),
+			MouseLeave: () => setHovered(false)
+		} }>
 			<uilistlayout
 				FillDirection={ Enum.FillDirection.Vertical }
 				Padding={ new UDim(0, rem(1.0625)) } />
